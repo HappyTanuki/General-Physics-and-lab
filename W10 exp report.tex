@@ -222,5 +222,154 @@ $$m_A\vec{V}_A+m_B\vec{V}_B = m_A\vec{V}_{A}^{'} + m_B\vec{V}_{B}^{'}
         \end{enumerate}
 \end{enumerate}
 \section{실험 결과 및 분석}
+빨간 카트의 질량: 0.270kg
+
+파란 카트의 질량: 0.270kg
+
+추의 질량: 0.5kg
+\subsection{충돌 전후 속도 분석}
+\begin{figure}[!h]
+    \centering
+    \resizebox{15.6cm}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        & 카트 질량 & \begin{tabular}{c}
+            $m_r$ \\
+            $[kg]$
+        \end{tabular} & \begin{tabular}{c}
+            $m_b$ \\
+            $[kg]$
+        \end{tabular} & \begin{tabular}{c}
+            $V_{r, init}$ \\
+            $[m/s]$
+        \end{tabular} & \begin{tabular}{c}
+            $V_{b, init}$ \\
+            $[m/s]$
+        \end{tabular} & \begin{tabular}{c}
+            $V_{r, fin}$ \\
+            $[m/s]$
+        \end{tabular} & \begin{tabular}{c}
+            $V_{b, fin}$ \\
+            $[m/s]$
+        \end{tabular} \\
+        \hline
+        \multirow{2}{*}{폭발} & 동일 질량 & 0.270 & 0.270 & 0.0 & 0.0 & -0.567 &
+            0.573 \\
+        \cline{2-8}
+        & 다른 질량 & 0.270 & 0.770 & 0.0 & 0.0 & -0.681 & 0.247 \\
+        \cline{2-8}
+        \hline
+        \multirow{2}{*}{완전 비탄성 출돌} & 동일 질량 & 0.270 & 0.270 & 0.505 &
+            0.0 & 0.251 & 0.251 \\
+        \cline{2-8}
+        & 다른 질량 & 0.270 & 0.770 & 0.480 & 0.0 & 0.125 & 0.125 \\
+        \cline{2-8}
+        \hline
+        \multirow{2}{*}{탄성 충돌} & 동일 질량 & 0.270 & 0.270 & 0.374 & 0.0 &
+            0.0 & 0.366 \\
+        \cline{2-8}
+        & 다른 질량 & 0.270 & 0.770 & 0.466 & 0.0 & -0.197 & 0.233 \\
+        \hline
+    \end{tabular}
+    }
+    \caption{\label{table1}}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \resizebox{15.6cm}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|}
+        \hline
+        & 카트 질량 & \begin{tabular}{c}
+            $P_{r,init}$ \\
+            $[kg \cdot m/s]$
+        \end{tabular} & \begin{tabular}{c}
+            $P_{b,init}$ \\
+            $[kg \cdot m/s]$
+        \end{tabular} & \begin{tabular}{c}
+            $P_{total,init}$ \\
+            $[kg \cdot m/s]$
+        \end{tabular} & \begin{tabular}{c}
+            $P_{r,fin}$ \\
+            $[kg \cdot m/s]$
+        \end{tabular} & \begin{tabular}{c}
+            $P_{b,fin}$ \\
+            $[kg \cdot m/s]$
+        \end{tabular} & \begin{tabular}{c}
+            $P_{total,fin}$ \\
+            $[kg \cdot m/s]$
+        \end{tabular} \\
+        \hline
+        \multirow{2}{*}{폭발} & 동일 질량 & 0.0 & 0.0 & 0.0 & -0.153 & 0.155 &
+            0.00164 \\
+        \cline{2-8}
+        & 다른 질량 & 0.0 & 0.0 & 0.0 & -0.186 & 0.190 & 0.00433 \\
+        \cline{2-8}
+        \hline
+        \multirow{2}{*}{완전 비탄성 출돌} & 동일 질량 & 0.136 & 0.0 & 0.136 &
+            0.0677 & 0.0679 & 0.136 \\
+        \cline{2-8}
+        & 다른 질량 & 0.129 & 0.0 & 0.129 & 0.0338 & 0.0965 & 0.130 \\
+        \cline{2-8}
+        \hline
+        \multirow{2}{*}{탄성 충돌} & 동일 질량 & 0.0993 & 0.0 & 0.0996 & -0.00109
+        & 0.0971 & 0.0960 \\
+        \cline{2-8}
+        & 다른 질량 & 0.126 & 0.0 & 0.126 & -0.0532 & 0.0180 & 0.127 \\
+        \hline
+    \end{tabular}
+    }
+    \caption{\label{table2}}
+\end{figure}
+\begin{figure}[!h]
+    \centering
+    \resizebox{15.6cm}{!}{
+    \begin{tabular}{|c|c|c|c|c|c|c|c|c|}
+        \hline
+        & 카트 질량 & \begin{tabular}{c}
+            $K\!E_{r,init}$ \\
+            $[J]$
+        \end{tabular} & \begin{tabular}{c}
+            $K\!E_{b,init}$ \\
+            $[J]$
+        \end{tabular} & \begin{tabular}{c}
+            $K\!E_{total,init}$ \\
+            $[J]$
+        \end{tabular} & \begin{tabular}{c}
+            $K\!E_{r,fin}$ \\
+            $[J]$
+        \end{tabular} & \begin{tabular}{c}
+            $K\!E_{b,fin}$ \\
+            $[J]$
+        \end{tabular} & \begin{tabular}{c}
+            $K\!E_{total,fin}$ \\
+            $[J]$
+        \end{tabular} & \begin{tabular}{c}
+            $\Delta K\!E_{total}$ \\
+            $[J]$
+        \end{tabular}\\
+        \hline
+        \multirow{2}{*}{폭발} & 동일 질량 & 0.0 & 0.0 & 0.0 & 0.0435 & 0.0446 &
+            0.0882 & 0.0882 \\
+        \cline{2-9}
+        & 다른 질량 & 0.0 & 0.0 & 0.0 & 0.0639 & 0.0234 & 0.0873 & 0.0873 \\
+        \cline{2-9}
+        \hline
+        \multirow{2}{*}{완전 비탄성 출돌} & 동일 질량 & 0.0345 & 0.0 & 0.0345 &
+            0.00841 & 0.00848 & 0.0169 & -0.0176 \\
+        \cline{2-9}
+        & 다른 질량 & 0.0310 & 0.0 & 0.0310 & 0.00219 & 0.00614 & 0.00833 &
+            -0.02267 \\
+        \cline{2-9}
+        \hline
+        \multirow{2}{*}{탄성 충돌} & 동일 질량 & 0.0183 & 0.0 & 0.0183 & 0.0 &
+            0.0176 & 0.0176 & -0.0007 \\
+        \cline{2-9}
+        & 다른 질량 & 0.0290 & 0.0 & 0.0290 & 0.00524 & 0.0210 & 0.0262 &
+            -0.0028 \\
+        \hline
+    \end{tabular}
+    }
+    \caption{\label{table3}}
+\end{figure}
 \section{실험 고찰}
 \end{document}
