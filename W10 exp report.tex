@@ -1,0 +1,226 @@
+\documentclass[12pt,a4paper]{article}
+\usepackage{kotex}
+\usepackage{graphicx}
+\usepackage{hyperref}
+\usepackage{indentfirst}
+\usepackage{subcaption}
+\usepackage{multirow}
+\usepackage{flafter}
+\usepackage{tikz}
+\usetikzlibrary{arrows.meta, intersections, decorations.markings,
+    positioning, backgrounds, through, calc, angles, quotes}
+\setlength{\parskip}{2mm}
+\usepackage{amsmath}
+\usepackage[top=3cm, bottom=2.54cm, left=2.54cm, right=2.54cm]{geometry}
+\usepackage[yyyymmdd]{datetime}
+\renewcommand{\dateseparator}{-}
+\usepackage{array}
+\newcolumntype{L}[1]{>{
+    \raggedright\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{C}[1]{>{
+    \centering\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+\newcolumntype{R}[1]{>{
+    \raggedleft\let\newline\\\arraybackslash\hspace{0pt}}m{#1}}
+
+\begin{document}
+\begin{titlepage}
+    \centering
+    \begin{tabular}{|C{15cm}|}
+        \hline
+        \rule{0in}{6ex}
+        {\huge 물리학 및 실험 1\par} \\ 
+        {\large 스마트 카트를 이용한 운동량 보존 법칙\par} \\
+        \hline
+    \end{tabular} \\
+    \vspace{5cm}
+    \includegraphics[height=7.36cm]{logo.png}\par
+    \vspace{3cm}
+    \begin{tabular}{|l|l|l|l|l|l|}
+        \hline
+        과목 & \multicolumn{5}{l|}{물리학및실험1} \\
+        \hline
+        담당교수 & \multicolumn{2}{l|}{전계진} & 담당조교 &
+            \multicolumn{2}{l|}{} \\
+        \hline
+        조 및 조원 &
+        \multicolumn{5}{l|}{2조, 김민수 김민규 김민서 김백준 김연주} \\
+        \hline
+        제출일 & \multicolumn{5}{l|}{\today} \\
+        \hline
+        작성자 & 김민수 & 학번 & 20518009 & 학과 & 정보보호 \\
+        \hline
+    \end{tabular}
+\end{titlepage}
+\section{실험목적}
+두 물체가 짧은 상호작용(탄성, 완전 비탄성, 폭발)하는 경우 상호작용 전후에 선운동량이
+보존되는지 확인하여 운동량 보존법칙을 이해하고 상호작용 전후의 운동에너지가
+보존되는지도 확인한다.
+\section{서론}
+\begin{itemize}
+    \item 탄성 및 비탄성 충돌은 질량이 다른 두 개의 역학 카트로 수행된다.
+        마그네틱 범퍼는 탄성 충돌에 사용되며, Velcro® 범퍼는 완전 비탄성 충돌에
+        사용된다. 두 경우 모두 운동량은 보존된다.
+    \item 카트 속도는 카트의 속도 센서로 기록된다. 카트의 마찰이 미치는 영향은 매우
+        작다. 충돌 전후의 총 운동 에너지도 연구한다.
+    \item 폭발, 탄성충돌, 완전 비탄성충돌을 스마트 카트를 이용하여 실험을 실시하고
+        운동량 보존의 법칙을 확인하고 또한 에너지의 보존 여부를 확인한다.
+\end{itemize}
+\section{실험원리}
+알짜 외력이 작용하지 않을 때 충돌하는 두 물체 전체 계의 총 운동량은 보존된다.
+$$\textrm{충돌전의 운동량} = \textrm{충돌 후의 운동량}$$
+$$m_A\vec{V}_A+m_B\vec{V}_B = m_A\vec{V}_{A}^{'} + m_B\vec{V}_{B}^{'}
+\left[ \Sigma \vec{F}_{ext} = 0 \right]$$
+두 개의 충돌하는 공으로 이루어진 계의 전체 운동량 벡터는 보존된다.
+
+운동량 보존 법칙(law of conservation of momentum)의 일반적인 표현: 고립계의 전체
+운동량은 일정하게 유지된다.
+
+어떠한 충돌에서나 운동량은 보존 된다. 충돌에서 운동에너지도 보존되면 탄성충돌,
+보존되지 않으면 비탄성 충돌이라 한다.
+
+\begin{itemize}
+    \item \begin{tabular}{l}
+            탄성충돌: 운동량, 운동에너지 보존 \\
+            \begin{tabular}{|c|}
+                \hline
+                $\textrm{충돌 전 전체 운동 에너지} =
+                \textrm{충돌 후 전체 운동 에너지}$ \\
+                $\frac{1}{2}m_AV_A^2 + \frac{1}{2}m_BV_B^2 =
+                \frac{1}{2}m_AV_A^{'2} + \frac{1}{2}m_BV_B^{'2}$\\
+                \hline
+            \end{tabular}
+        \end{tabular}
+    \item 비탄성 충돌: 운동에너지 보존 안됨. 완전 비탄성 충돌은 한 덩어리가 되어
+        같은 속도로 날아가는 것이다.
+\end{itemize}
+\section{실험기구 및 장치}
+\begin{itemize}
+    \item 역학트랙, 자기 범퍼, 벨크로 범퍼, 수준기
+    \item 센서 실험장치: data 수집 및 분석 software (Capstone),
+        스마트 카트 2대, 500g 추
+\end{itemize}
+\section{실험방법}
+\begin{enumerate}
+    \item [준비 1]
+        \begin{enumerate}
+            \item [1.] 역학 트랙을 설치하고 양쪽 끝에는 자기범퍼를 설치한다.
+            \item [2.] Red 와 Blue의 두 Smart Cart에 자석 범퍼를 장착한다.
+            \item [3.] 트랙위에 수준기를 올려놓고 좌우 수평을 맞춘다.
+                어느 쪽으로도 살짝 움직였을 때 가속되지 않아야 한다.
+            \item [4.] 두 카트의 질량과 사용할 500g 추의 질량을 정밀 측정한다.
+                유효숫자는 4개로 한다.
+        \end{enumerate}
+    \item [준비 2]
+        \begin{enumerate}
+            \item [1.] 캡스톤을 실행한다.
+            \item [2.] 스마트카트를 연결하고 내장된 센서 (위치, 속도)를 설정한다.
+                (샘플링레이트는 50Hz로 맞춘다.)
+            \item [3.] 표와 그래프 모드로 선택하여 표의 칼럼을 추가하여
+                시간, 속도(Red), 속도(Blue), 그래프는 속도-시간 그래프에
+                속도(Red), 속도(Blue)를 동일한 축에 나오도록 설정한다.
+            \item [4.] 속도의 부호를 확인한다. 측정자의 입장에서 볼 때 두 수레의
+                속도가 오른쪽으로 움직일 때 양수가 되도록 한다.
+            \item [5.] 파란색 카트가 빨간색 카트의 오른쪽에 있는 상태에서
+                마그네틱 범퍼가 모두 오른쪽에 있게 둔다.
+                측정을 시작하고 두 카트를 오른쪽으로 민다. 두 속도 모두 양수여야
+                한다. (카트를 움직여 확인해 본다. 카트는 카트의 마그네틱 범퍼
+                방향으로 움직일 때 양의 속도로 인식한다.)
+            \item [6.] 함수를 추가하고 그래프에 총운동량과 총운동에너지 그래프를
+                각각 추가한다.
+        \end{enumerate}
+    \item [실험 1]
+        \begin{enumerate}
+            \item [A.] 
+                \begin{enumerate}
+                    \item [] 동일 질량 카트
+                    \item [1.] 카트의 플런저를 눌러 2번 위치에 놓는다. 한 카트가
+                        다른 카트와 접촉하고 있는 한 어느 플런저가 눌려 있는 것이
+                        중요하지 않다. 트랙 중앙에서 두 개의 카트가 다른 카트와
+                        접촉하도록 놓는다.
+                    \item [2.] 빨간색 카트를 반대로 하고 있으므로 동일한 좌표계를
+                        유지하려면 setup을 열고 빨간색 스마트 카트 위치 센서 옆에
+                        있는 속성 버튼을 클릭하고 부호 변경을 선택한다.
+                    \item [3.] 측정을 시작하고 카트가 움직이도록 트리거 누른다.
+                        추 또는 매스바로 방아쇠를 누르는 것이 효과적이다.
+                    \item [4.] 카트가 트랙 끝에 도달하기 전에 기록을 중지한다.
+                    \item [5.] 속도 - 시간 그래프에서 도구를 사용하여 폭발 직후
+                        빨간색 및 파란색 카트의 속도, 총 운동량, 총 운동에너지를
+                        찾아서 표에 기록한다.
+                \end{enumerate}
+            \item [B.]
+                \begin{enumerate}
+                    \item [] 질량이 서로 다른 카트
+                    \item [1.] 500g 추를 파란색 카트에 넣는다. Calculator의 $m_2$
+                        값(추의 질량을 더한 값)을 변경한다. 파트 A의 1~4단계를
+                        반복한다.
+                \end{enumerate}
+        \end{enumerate}
+    \item [실험 2]
+        \begin{enumerate}
+            \item [A.] 
+                \begin{enumerate}
+                    \item [] 동일 질량 카트
+                    \item [$\bullet$] 완전 비탄성 충돌을 위해 벨크로 범퍼를
+                        이용한다.
+                    \item [1.] Velcro® 범퍼가 서로 마주보게 하여 빨간색과 파란색
+                        카트를 트랙에 정지해 놓는다. Calculator의 $m_2$ 값을
+                        변경한다.
+                    \item [2.] 빨간색 카트를 반대로 하고 있으므로 동일한 좌표계를
+                        유지하려면 setup을 열고 빨간색 스마트 카트 위치 센서 옆에
+                        있는 속성 버튼을 클릭하고 부호 변경을 선택한다.
+                        (실험1과 동일)
+                    \item [3.] 측정을 시작하고 빨간색 카트를 파란색 카트 쪽으로
+                        밀어준다. 카트 중 하나가 트랙 끝에 도달하기 전에 측정을
+                        중지한다.
+                    \item [4.] 속도 대 시간 그래프에서 충돌 직전과 직후에 빨간
+                        카트의 속도를 찾는다. 그래프를 확장하여 관심 있는 영역만
+                        보는 것이 도움이 된다.
+                    \item [5.] 파란색 수레의 초기 속도는 0이고 최종 속도는 빨간색
+                    수레가 서로 붙어 있기 때문에 동일하다.
+                \end{enumerate}
+            \item [B.]
+                \begin{enumerate}
+                    \item [] 질량이 서로 다른 카트
+                    \item [$\bullet$] 벨크로 범퍼를 이용한다.
+                    \item [1.] 500g 추를 파란색 카트에 넣는다.
+                    Calculator의 $m_2$ 값을 변경한다. 파트 A의 1~4단계를 반복한다.
+                \end{enumerate}
+        \end{enumerate}
+    \item [실험 3]
+        \begin{enumerate}
+            \item [A.] 
+                \begin{enumerate}
+                    \item [] 동일 질량 카트
+                    \item [$\bullet$] 탄성 충돌을 위해 자기 범퍼를 이용한다.
+                    \item [1.] 마그네틱 범퍼가 서로 마주보게 하여 빨간색과 파란색
+                        카트를 트랙에 정지해 놓는다. 이제 빨간색 카트는 원래 양의
+                        방향에 있고 파란색 카트는 반전되었으므로 데이터 요약을 열고
+                        빨간색 스마트 카트 위치 센서 옆에 있는 속성 버튼을 클릭하고
+                        기호 변경을 선택 취소하고 파란색 스마트 카트 위치 센서
+                        속성을 열고 기호 변경 선택한다
+                    \item [2.] 마그네틱 범퍼가 서로 마주보게 하여 빨간색 및 파란색
+                        카트를 트랙에 정지해 놓는다. Calculator의 $m_2$ 값을
+                        변경한다.
+                    \item [3.] 측정을 시작하고 빨간색 카트를 파란색 카트 쪽으로
+                        밀어준다.
+                    \item [4.] 카트 중 하나가 트랙 끝에 도달하기 전에 측정을
+                        중지한다.
+                    \item [5.] 속도 대 시간 그래프에서 충돌 직전과 직후에 빨간
+                        카트의 속도를 찾는다. 총 운동량, 총 운동에너지도 찾아서
+                        표에 기록한다. 그래프를 확장하여 관심 있는 영역만 보는 것이
+                        도움이 된다.
+                    \item [6.] 파란색 수레의 초기 속도는 0이다. 파란색 카트의 최종
+                        속도를 찾는다.
+                \end{enumerate}
+            \item [B.]
+                \begin{enumerate}
+                    \item [] 질량이 서로 다른 카트
+                    \item [$\bullet$] 탄성 충돌을 위해 자기 범퍼를 이용한다.
+                    \item [1.] 500g 추를 파란색 카트에 넣는다. Calculator의
+                    $m_2$ 값을 변경한다. 파트 A의 1~6단계를 반복한다.
+                \end{enumerate}
+        \end{enumerate}
+\end{enumerate}
+\section{실험 결과 및 분석}
+\section{실험 고찰}
+\end{document}
